@@ -14,7 +14,28 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@chat-client/data-access/data-access-auth": [
+        "libs/data-access/data-access-auth/src/index.ts"
+      ],
+      "@chat-client/data-access/data-access-chat": [
+        "libs/data-access/data-access-chat/src/index.ts"
+      ],
+      "@chat-client/feature/feature-auth": [
+        "libs/feature/feature-auth/src/index.ts"
+      ],
+      "@chat-client/feature/feature-chat": [
+        "libs/feature/feature-chat/src/index.ts"
+      ],
+      "@chat-client/state/state-auth": ["libs/state/state-auth/src/index.ts"],
+      "@chat-client/state/state-chat": ["libs/state/state-chat/src/index.ts"],
+      "@chat-client/ui/ui-button": ["libs/ui/ui-button/src/index.ts"],
+      "@chat-client/ui/ui-chat-user-card": [
+        "libs/ui/ui-chat-user-card/src/index.ts"
+      ],
+      "@chat-client/ui/ui-input": ["libs/ui/ui-input/src/index.ts"],
+      "@chat-client/ui/ui-textarea": ["libs/ui/ui-textarea/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
