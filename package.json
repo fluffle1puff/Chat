@@ -2,7 +2,9 @@
   "name": "chat-client",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "npx nx run chat-app:serve"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~15.2.0",
