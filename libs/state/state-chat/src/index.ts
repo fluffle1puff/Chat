@@ -1,1 +1,1 @@
-export * from './lib/state-state-chat.module';
+export * from './lib/state-chat.module';

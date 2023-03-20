@@ -1,1 +1,1 @@
-export * from './lib/data-access-data-access-chat.module';
+export * from './lib/data-access-chat.module';

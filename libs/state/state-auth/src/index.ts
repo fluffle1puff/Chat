@@ -1,1 +1,1 @@
-export * from './lib/state-state-auth.module';
+export * from './lib/state-auth.module';
