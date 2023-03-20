@@ -1,0 +1,44 @@
+* {
+  color: colors.$third800;
+}
+
+.default-input {
+  border-bottom: 0.125em solid colors.$third400;
+
+  &:hover {
+    border-color: colors.$main800;
+  }
+
+  &:focus-visible,
+  &:active {
+    border-color: colors.$main900;
+  }
+}
+
+.outline-input {
+  border-radius: 0.25em;
+  border: 0.125em solid colors.$third400;
+
+  &:hover {
+    border-color: colors.$main800;
+  }
+
+  &:focus-visible,
+  &:active {
+    border-color: colors.$main900;
+  }
+}
+
+.filled-input {
+  background: colors.$third400;
+  border-bottom: 0.125em solid transparent;
+
+  &:hover {
+    border-color: colors.$main800;
+  }
+
+  &:focus-visible,
+  &:active {
+    border-color: colors.$main900;
+  }
+}

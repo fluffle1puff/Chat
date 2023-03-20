@@ -1,0 +1,48 @@
+@use 'libs/styles/src/lib/theme/colors';
+@import 'libs/styles/src/lib/common/inputs';
+
+:host {
+  display: block;
+
+  .input-wrapper {
+    input {
+      padding: 0.625em 0.875em;
+      color: colors.$third900;
+      border: none;
+      border-radius: 0.25em 0.25em 0 0;
+      transition: all 0.2s ease;
+      width: 100%;
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      &.default {
+        @extend .default-input;
+      }
+
+      &.outline {
+        @extend .outline-input;
+      }
+
+      &.filled {
+        @extend .filled-input;
+      }
+    }
+
+    &.with-icon {
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: 0.16em;
+        left: 0.25em;
+        color: colors.$main900;
+      }
+
+      input {
+        padding: 0.625em 2.625em;
+      }
+    }
+  }
+}

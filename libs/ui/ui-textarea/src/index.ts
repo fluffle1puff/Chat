@@ -1,1 +1,1 @@
-export * from './lib/ui-ui-textarea.module';
+export * from './lib/ui-textarea.module';

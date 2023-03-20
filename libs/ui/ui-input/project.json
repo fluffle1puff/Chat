@@ -28,6 +28,43 @@
           "libs/ui/ui-input/**/*.html"
         ]
       }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/ui/ui-input/.storybook",
+        "browserTarget": "ui-ui-input:build-storybook",
+        "compodoc": false,
+        "styles": "../../../apps/chat-app/src/styles.scss",
+        "stylePreprocessorOptions": {
+          "includePaths": "../../../apps/chat-app/src"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/ui-ui-input",
+        "configDir": "libs/ui/ui-input/.storybook",
+        "browserTarget": "ui-ui-input:build-storybook",
+        "compodoc": false,
+        "styles": "../../../apps/chat-app/src/styles.scss",
+        "stylePreprocessorOptions": {
+          "includePaths": "../../../apps/chat-app/src"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
     }
   },
   "tags": []

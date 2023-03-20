@@ -1,1 +1,1 @@
-export * from './lib/ui-ui-button.module';
+export * from './lib/ui-button.module';
