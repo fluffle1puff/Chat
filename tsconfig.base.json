@@ -15,32 +15,25 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@chat-client/data-access/data-access-auth": [
-        "libs/data-access/data-access-auth/src/index.ts"
-      ],
-      "@chat-client/data-access/data-access-chat": [
-        "libs/data-access/data-access-chat/src/index.ts"
-      ],
-      "@chat-client/feature/feature-auth": [
-        "libs/feature/feature-auth/src/index.ts"
-      ],
-      "@chat-client/feature/feature-chat": [
-        "libs/feature/feature-chat/src/index.ts"
-      ],
+      "@chat-client/data-access/data-access-auth": ["libs/data-access/data-access-auth/src/index.ts"],
+      "@chat-client/data-access/data-access-chat": ["libs/data-access/data-access-chat/src/index.ts"],
+      "@chat-client/feature/feature-auth": ["libs/feature/feature-auth/src/index.ts"],
+      "@chat-client/feature/feature-chat": ["libs/feature/feature-chat/src/index.ts"],
       "@chat-client/models": ["libs/models/src/index.ts"],
       "@chat-client/state/state-auth": ["libs/state/state-auth/src/index.ts"],
       "@chat-client/state/state-chat": ["libs/state/state-chat/src/index.ts"],
       "@chat-client/styles": ["libs/styles/src/index.ts"],
       "@chat-client/ui/ui-button": ["libs/ui/ui-button/src/index.ts"],
-      "@chat-client/ui/ui-chat-user-card": [
-        "libs/ui/ui-chat-user-card/src/index.ts"
-      ],
+      "@chat-client/ui/ui-chat-user-card": ["libs/ui/ui-chat-user-card/src/index.ts"],
       "@chat-client/ui/ui-form-field": ["libs/ui/ui-form-field/src/index.ts"],
+      "@chat-client/ui/ui-header": ["libs/ui/ui-header/src/index.ts"],
       "@chat-client/ui/ui-input": ["libs/ui/ui-input/src/index.ts"],
       "@chat-client/ui/ui-textarea": ["libs/ui/ui-textarea/src/index.ts"],
-      "@chat-client/util/util-control-component": [
-        "libs/util/util-control-component/src/index.ts"
-      ]
+      "@chat-client/ui/ui-theme-selector": ["libs/ui/ui-theme-selector/src/index.ts"],
+      "@chat-client/util/util-control-component": ["libs/util/util-control-component/src/index.ts"],
+      "@chat-client/util/util-meta-reducer": ["libs/util/util-meta-reducer/src/index.ts"],
+      "@chat-client/util/util-theme-service": ["libs/util/util-theme-service/src/index.ts"],
+      "@chat-client/util/util-token-service": ["libs/util/util-token-service/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

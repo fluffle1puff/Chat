@@ -1,1 +1,1 @@
-export * from './lib/ui-ui-chat-user-card.module';
+export * from './lib/ui-chat-user-card.module';

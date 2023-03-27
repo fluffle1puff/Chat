@@ -1,4 +1,5 @@
 @use 'libs/styles/src/lib/theme/colors';
+@use 'libs/styles/src/lib/common/vars';
 
 :host {
   display: block;
@@ -8,7 +9,7 @@
     border: none;
     display: flex;
     height: 2.5em;
-    border-radius: 2.5em;
+    border-radius: vars.$border-radius-xxl;
     color: colors.$white-color;
     align-items: center;
     justify-content: center;

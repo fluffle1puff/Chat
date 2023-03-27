@@ -1,14 +1,16 @@
 @use 'libs/styles/src/lib/theme/colors';
+@use 'libs/styles/src/lib/common/vars';
 @import 'libs/styles/src/lib/common/inputs';
 
 :host {
   display: block;
+  line-height: 0px;
 
   textarea {
     padding: 0.625em 0.85em;
     color: colors.$main900;
     border: none;
-    border-radius: 4px 4px 0 0;
+    border-radius: vars.$border-radius-xxs vars.$border-radius-xxs 0 0;
     transition: all 0.2s ease;
     width: 100%;
 

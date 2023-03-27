@@ -1,0 +1,5 @@
+<cc-chat-user-item
+  *ngFor="let user of users; trackBy: usersTrackByFn"
+  [user]="user"
+  (click)="updateSelectedUser(user)"
+></cc-chat-user-item>

@@ -1,0 +1,39 @@
+@use 'libs/styles/src/lib/theme/colors';
+
+.room {
+  display: flex;
+  padding: 1.07em 0.7em;
+  border-radius: 0px;
+  justify-content: space-between;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 1px solid colors.$translucent-border-light;
+
+  &.active {
+    color: colors.$main900;
+    border-left: 2px solid colors.$main900;
+    border-right: 2px solid colors.$main900;
+  }
+
+  &:hover {
+    border-left: 2px solid colors.$main800;
+    border-right: 2px solid colors.$main800;
+  }
+
+  .name {
+    text-transform: capitalize;
+  }
+
+  .date {
+    opacity: 0.4;
+    font-size: 0.78em;
+  }
+}
+
+:host-context(.dark) {
+  .room {
+    background: colors.$translucent-block-dark;
+    border-bottom: 1px solid colors.$translucent-border-dark;
+  }
+}

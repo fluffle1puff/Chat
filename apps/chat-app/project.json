@@ -16,11 +16,15 @@
         "tsConfig": "apps/chat-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/chat-app/src/favicon.ico", "apps/chat-app/src/assets"],
-        "styles": ["apps/chat-app/src/styles.scss"],
+        "styles": [
+          "apps/chat-app/src/assets/css/reset.css",
+          "apps/chat-app/src/styles.scss"
+        ],
         "scripts": [],
         "stylePreprocessorOptions": {
           "includePaths": ["./src/styles"]
-        }
+        },
+        "allowedCommonJsDependencies": ["lodash"]
       },
       "configurations": {
         "production": {

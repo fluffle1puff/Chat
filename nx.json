@@ -8,13 +8,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e",
-          "build-storybook"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e", "build-storybook"],
         "accessToken": "MzY2Yzc2ZjItZTA0Zi00M2ZjLThkY2YtYzg4NWM4ZmFmYzQ4fHJlYWQtd3JpdGU="
       }
     }
@@ -31,18 +25,10 @@
       "inputs": ["default", "^production"]
     },
     "lint": {
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json",
-        "{workspaceRoot}/.eslintignore"
-      ]
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json", "{workspaceRoot}/.eslintignore"]
     },
     "build-storybook": {
-      "inputs": [
-        "default",
-        "^production",
-        "!{projectRoot}/.storybook/**/*"
-      ]
+      "inputs": ["default", "^production", "!{projectRoot}/.storybook/**/*"]
     }
   },
   "namedInputs": {

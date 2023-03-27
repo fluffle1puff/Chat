@@ -1,0 +1,63 @@
+@use 'libs/styles/src/lib/theme/colors';
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+
+    mat-icon {
+      color: colors.$white-color;
+      text-shadow: -2px 2px 4px colors.$warning700;
+    }
+  }
+
+  .right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+
+    .user {
+      background: transparent;
+      color: colors.$white-color;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+:host-context(.dark) {
+  header {
+    background: colors.$header;
+    border-bottom: 1px solid colors.$translucent-border-dark;
+
+    .logo {
+
+      mat-icon {
+        text-shadow: -2px 2px 4px colors.$main900;
+      }
+    }
+  }
+}
+
+:host-context(.light) {
+  header {
+    background-color: colors.$headerLight;
+    color: colors.$white-color;
+  }
+}

@@ -1,11 +1,64 @@
-button {
-  cursor: pointer;
-}
+@use 'libs/styles/src/lib/theme/colors';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'libs/styles/src/lib/index';
 
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-@import "@angular/material/prebuilt-themes/indigo-pink.css";
-@import "../../../libs/styles/src/lib/index";
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+body {
+  &.dark {
+    background-color: colors.$body;
+    color: colors.$white-color;
+
+    .main-block {
+      background-color: colors.$blockDark;
+      box-shadow: 0 0 1.42em 0px colors.$translucent-block-dark;
+    }
+  }
+
+  &.light {
+    background-color: colors.$bodyLight;
+
+    .main-block {
+      background-color: colors.$blockLight;
+    }
+  }
+}
+
+.mat-mdc-menu-panel {
+  background-color: transparent;
+  position: relative;
+  box-shadow: none !important;
+  top: 16px;
+  left: 19px;
+}
+
+.mat-mdc-menu-content {
+  .dark {
+    background-color: colors.$blockDark;
+    border-radius: $border-radius-xxs;
+
+    * {
+      color: colors.$white-color;
+    }
+  }
+
+  .light {
+    background-color: colors.$main900;
+    border-radius: $border-radius-xxs;
+
+    * {
+      color: colors.$white-color;
+    }
+  }
+}

@@ -1,7 +1,23 @@
-$main1000: #5470fc;
-$main900: #758bfd;
-$main800: #758cfda1;
+$main1000: #50E3C2; //violet #6452d6; // blue #5470fc;
+$main900: #2ccdaa; //violet #6D5DD3; // blue #758bfd;
+$main800: #50e3c391; //violet #7b6cdbb5; // blue #758cfda1;
 $main700: #7e93fa;
+$main-gradient: linear-gradient(to bottom right, #06735b, #2DCDAA);
+$second-accent: #3B79CF;
+
+$blockDark: #252733;
+$body: #18181E;
+$header: #202028;
+
+$translucent-block-dark: rgba(0, 0, 0, 0.2);
+$translucent-border-dark: rgba(255, 255, 255, 0.1);
+
+$translucent-block-light: #2ccdaa4b;
+$translucent-border-light: #2ccdaa28;
+
+$bodyLight: #F8F8F9;
+$blockLight: #fff;
+$headerLight: #2ccdaa;
 
 $second900: #141515;
 $second800: #1e1f20;

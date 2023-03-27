@@ -1,0 +1,57 @@
+<ng-container
+  *ngIf="{
+    selectedTab: selectedTab$ | async,
+    selectedRoom: selectedRoom$ | async
+  } as data"
+>
+  <div class="tabs">
+    <button
+      type="button"
+      [class.active]="data.selectedTab === Tab.ChatRooms"
+      (click)="selectContactsTab(Tab.ChatRooms, data.selectedTab)"
+    >
+      <mat-icon fontIcon="question_answer"></mat-icon>
+      <span>Chats</span>
+    </button>
+    <button
+      type="button"
+      [class.active]="data.selectedTab === Tab.Users"
+      (click)="selectContactsTab(Tab.Users, data.selectedTab)"
+    >
+      <mat-icon fontIcon="people"></mat-icon>
+      <span>Users</span>
+    </button>
+  </div>
+
+  <div [ngSwitch]="data.selectedTab">
+    <div *ngSwitchCase="Tab.ChatRooms">
+      <ng-container *ngIf="rooms$ | async as rooms">
+        <ng-container *ngIf="data.selectedRoom !== null">
+          <cc-chat-room-list
+            [rooms]="rooms"
+            [selectedRoom]="data.selectedRoom"
+            (selectRoom)="updateSelectedRoom($event)"
+          >
+          </cc-chat-room-list>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div *ngSwitchCase="Tab.Users">
+      <ng-container *ngIf="users$ | async as users">
+        <cc-chat-user-list
+          [users]="users"
+          (selectUser)="updateSelectedUserToText($event)"
+        ></cc-chat-user-list>
+      </ng-container>
+    </div>
+    <div *ngSwitchDefault>
+      There is no one you can write to :с
+    </div>
+  </div>
+</ng-container>
+
+
+
+
+
+

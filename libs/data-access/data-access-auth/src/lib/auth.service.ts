@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { LoginResponse, NewUser, User } from '@chat-client/models';
+import { LoginPayload, TokenInfo, NewUser, User } from '@chat-client/models';
 
 @Injectable()
 export class AuthService {
   constructor(private httpClient: HttpClient) {}
 
-  login(user: User): Observable<LoginResponse> {
-    return this.httpClient.post<LoginResponse>('api/users/login', user);
+  login(user: LoginPayload): Observable<TokenInfo> {
+    return this.httpClient.post<TokenInfo>('api/users/login', user);
   }
 
   register(user: NewUser): Observable<User> {

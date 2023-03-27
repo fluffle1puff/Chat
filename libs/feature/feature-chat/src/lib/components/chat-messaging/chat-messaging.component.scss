@@ -1,0 +1,42 @@
+@use 'libs/styles/src/lib/theme/colors';
+
+:host {
+  display: block;
+  width: 100%;
+  padding: 1.4em;
+
+  .chat-name {
+    border-bottom: 1px solid colors.$translucent-border-light;
+    padding-bottom: 0.7em;
+    text-transform: capitalize;
+  }
+
+  .new-message {
+    padding-top: 1.4em;
+    border-top: 1px solid colors.$translucent-border-light;
+  }
+
+  .wrapper {
+    height: 100%;
+
+    .no-selected-room {
+      text-align: center;
+
+      .smile {
+        font-size: 3em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+
+:host-context(.dark) {
+  .chat-name {
+    border-bottom: 1px solid colors.$translucent-border-dark;
+  }
+
+  .new-message {
+    border-top: 1px solid colors.$translucent-border-dark;
+  }
+}

@@ -1,0 +1,23 @@
+<header>
+  <div class="logo">
+    <mat-icon fontIcon="rocket_launch"></mat-icon>
+    <span>ChatApp</span>
+  </div>
+  <div class="right">
+    <cc-theme-selector [currentTheme]="theme" (changeTheme)="setTheme($event)"></cc-theme-selector>
+    <ng-container *ngIf="currentUser">
+      <button type="button" class="user" [matMenuTriggerFor]="belowMenu">
+        <mat-icon>person</mat-icon>
+        <span>{{ currentUser.username }}</span>
+      </button>
+      <mat-menu #belowMenu="matMenu" yPosition="below">
+        <div [ngClass]="theme">
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            Logout
+          </button>
+        </div>
+      </mat-menu>
+    </ng-container>
+  </div>
+</header>

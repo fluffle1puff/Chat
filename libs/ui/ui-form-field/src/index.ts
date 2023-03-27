@@ -1,1 +1,1 @@
-export * from './lib/ui-form-field.module
+export * from './lib/ui-form-field.module';

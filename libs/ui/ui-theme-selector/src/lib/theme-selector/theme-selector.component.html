@@ -1,0 +1,4 @@
+<div class="theme-selector" (click)="toggleTheme()">
+  <mat-icon *ngIf="theme === ThemeEnum.Dark" fontIcon="light_mode"></mat-icon>
+  <mat-icon *ngIf="theme === ThemeEnum.Light" fontIcon="dark_mode"></mat-icon>
+</div>

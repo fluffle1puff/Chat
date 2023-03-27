@@ -1,0 +1,32 @@
+@use 'libs/styles/src/lib/theme/colors';
+@use 'libs/styles/src/lib/common/vars';
+
+:host {
+  display: block;
+  width: 100%;
+
+  .chats {
+    max-width: 85em;
+    margin: 1.42em auto;
+    border-radius: vars.$border-radius-s;
+    height: calc(100vh - 110px);
+    border: 1px solid colors.$translucent-border-light;
+    display: grid;
+    grid-template-columns: 21.5em auto;
+    overflow: auto;
+  }
+
+  .contacts {
+    border-right: 1px solid colors.$translucent-border-light;
+  }
+}
+
+:host-context(.dark) {
+  .chats {
+    border: 1px solid colors.$translucent-border-dark;
+  }
+
+  .contacts {
+    border-right: 1px solid colors.$translucent-border-dark;
+  }
+}

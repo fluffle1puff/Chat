@@ -1,0 +1,7 @@
+<div
+  class="room"
+  [class.active]="isSelected"
+>
+  <div class="name">{{ room.name }}</div>
+  <div class="date">{{ room.updated_at | date:'d	MMM' }}</div>
+</div>

@@ -23,10 +23,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/feature/feature-auth/**/*.ts",
-          "libs/feature/feature-auth/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/feature/feature-auth/**/*.ts", "libs/feature/feature-auth/**/*.html"]
       }
     }
   },

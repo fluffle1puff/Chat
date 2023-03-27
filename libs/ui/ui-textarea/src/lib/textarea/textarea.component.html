@@ -1,4 +1,6 @@
+<ng-keyboard-shortcuts [shortcuts]="shortcuts"></ng-keyboard-shortcuts>
 <textarea
+  #textarea
   [(ngModel)]="value"
   [disabled]="isDisabled"
   [placeholder]="placeholder"
@@ -6,5 +8,4 @@
   [rows]="rows"
   [ngClass]="inputStyle"
   (blur)="onTouchedFn()"
->
-</textarea>
+></textarea>

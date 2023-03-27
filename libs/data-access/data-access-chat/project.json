@@ -23,10 +23,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/data-access/data-access-chat/**/*.ts",
-          "libs/data-access/data-access-chat/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/data-access/data-access-chat/**/*.ts", "libs/data-access/data-access-chat/**/*.html"]
       }
     }
   },

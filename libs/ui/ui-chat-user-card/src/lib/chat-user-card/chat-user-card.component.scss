@@ -1,0 +1,23 @@
+@use 'libs/styles/src/lib/theme/colors';
+@use 'libs/styles/src/lib/common/vars';
+
+.user {
+  display: flex;
+  gap: 0.7em;
+  text-transform: capitalize;
+  width: 100%;
+  background: colors.$translucent-block-dark;
+  padding: 0.7em;
+  align-items: center;
+  border-radius: vars.$border-radius-xxs;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+
+  .avatar {
+    line-height: 0px;
+  }
+
+  &:hover {
+    border-left: 2px solid colors.$main900;
+  }
+}

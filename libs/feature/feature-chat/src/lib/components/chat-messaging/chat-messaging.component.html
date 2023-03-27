@@ -1,0 +1,22 @@
+<div *ngIf="chatRoom; else no_chatroom_selected">
+  <h2 class="chat-name">{{chatRoom.chatName}}</h2>
+  <cc-chat-history
+    [currentUser]="currentUser"
+    [messages]="messages"
+  ></cc-chat-history>
+  <div class="new-message">
+    <cc-textarea
+      [(ngModel)]="message"
+      placeholder="Text some message..."
+      (shiftAndEnterWerePressed)="createMessage()"
+    ></cc-textarea>
+  </div>
+</div>
+<ng-template #no_chatroom_selected>
+  <div class="flex-middle-center-collumn wrapper">
+    <div class="no-selected-room">
+      <p class="smile">( ◡‿◡ *)</p>
+      <p>Choose a person to chat</p>
+    </div>
+  </div>
+</ng-template>

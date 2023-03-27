@@ -23,10 +23,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/ui/ui-button/**/*.ts",
-          "libs/ui/ui-button/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/ui/ui-button/**/*.ts", "libs/ui/ui-button/**/*.html"]
       }
     }
   },

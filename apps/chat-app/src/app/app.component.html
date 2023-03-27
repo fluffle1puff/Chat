@@ -1,1 +1,7 @@
+<cc-header
+  [theme]="theme"
+  [currentUser]="(currentUser$ | async) || undefined"
+  (changeTheme)="setTheme($event)"
+  (logoutUser)="logout()"
+></cc-header>
 <router-outlet></router-outlet>

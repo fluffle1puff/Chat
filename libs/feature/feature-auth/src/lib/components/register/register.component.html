@@ -1,1 +1,9 @@
-<p>register works!</p>
+<form [formGroup]="registerForm" class="main-block flex-column-middle-center">
+  <p>Sing up</p>
+  <cc-input formControlName="username" matIcon="person" placeholder="Username"></cc-input>
+  <cc-input formControlName="email" matIcon="alternate_email" placeholder="Email"></cc-input>
+  <cc-input formControlName="password" matIcon="password" placeholder="Password"></cc-input>
+  <cc-button text="Register" (click)="registerUser()"></cc-button>
+
+  <a routerLink="/auth/login">Do you have an account? Then sign in!</a>
+</form>

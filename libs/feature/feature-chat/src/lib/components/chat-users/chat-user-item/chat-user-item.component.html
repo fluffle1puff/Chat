@@ -1,0 +1,14 @@
+<div class="user">
+  <div class="left">
+    <div class="avatar">
+      <mat-icon fontIcon="account_circle"></mat-icon>
+    </div>
+    <div class="user-info">
+      <div class="name">{{ user.username }}</div>
+      <div class="email">{{ user.email }}</div>
+    </div>
+  </div>
+  <button type="button" (click)="updateSelectedUser(user)">
+    <mat-icon fontIcon="outgoing_mail"></mat-icon>
+  </button>
+</div>

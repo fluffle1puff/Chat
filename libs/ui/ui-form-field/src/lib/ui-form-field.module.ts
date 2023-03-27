@@ -5,5 +5,6 @@ import { FormFieldComponent } from './form-field/form-field.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [FormFieldComponent],
+  exports: [FormFieldComponent]
 })
 export class UiFormFieldModule {}

@@ -1,0 +1,75 @@
+@use 'libs/styles/src/lib/theme/colors';
+
+:host {
+  display: block;
+  width: 100%;
+
+  .user {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid colors.$translucent-border-light;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .left {
+      display: flex;
+      gap: 1.42em;
+      align-items: center;
+      padding: 0.7em 0;
+
+      .user-info {
+        .name {
+          text-transform: capitalize;
+        }
+
+        .email {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .avatar {
+      padding-left: 1em;
+
+      mat-icon {
+        font-size: 2.7em;
+        width: 1em;
+        height: 1em;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      border-radius: 0px;
+      border: none;
+      padding: 0.78em;
+      color: colors.$main900;
+      border-left: 1px solid colors.$translucent-border-light;
+      background: transparent;
+
+      &:hover {
+        color: colors.$white-color;
+        background-color: colors.$main900;
+      }
+    }
+  }
+}
+
+:host-context(.dark) {
+  .user {
+    background: colors.$translucent-block-dark;
+    border-bottom: 1px solid colors.$translucent-border-dark;
+
+    button {
+      color: colors.$white-color;
+      border-left: 1px solid colors.$translucent-border-dark;
+
+      &:hover {
+        background: transparent;
+        color: colors.$main900;
+      }
+    }
+  }
+}

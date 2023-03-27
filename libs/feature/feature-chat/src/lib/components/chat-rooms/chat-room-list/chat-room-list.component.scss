@@ -1,0 +1,7 @@
+@use 'libs/styles/src/lib/theme/colors';
+
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

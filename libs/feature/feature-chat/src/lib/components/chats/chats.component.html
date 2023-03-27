@@ -1,0 +1,23 @@
+<div class="chats main-block">
+  <div class="contacts">
+    <cc-contact-tabs
+      [users$]="users$"
+      [rooms$]="rooms$"
+      [selectedTab$]="selectedContactsTab$"
+      [selectedRoom$]="selectedRoom$"
+      (selectUserToText)="openRoom($event)"
+      (selectRoom)="updateSelectedRoom($event)"
+      (selectTab)="updateSelectedTab($event)"
+    ></cc-contact-tabs>
+  </div>
+  <ng-container>
+    <cc-chat-messaging
+      [chatRoom]="(selectedRoom$ | async) || undefined"
+      [messages]="(messages$ | async) || undefined"
+      [currentUser]="(currentUser$ | async) || undefined"
+      (createNewMessage)="sendMessage($event)"
+      (destroyChatMessagin)="leaveRoom($event)"
+    ></cc-chat-messaging>
+  </ng-container>
+</div>
+

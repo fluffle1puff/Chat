@@ -1,1 +1,8 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" class="main-block flex-column-middle-center">
+  <p>Sing in</p>
+  <cc-input formControlName="email" matIcon="alternate_email" placeholder="Email"></cc-input>
+  <cc-input formControlName="password" matIcon="password" placeholder="Password"></cc-input>
+  <cc-button text="Login" (click)="loginUser()"></cc-button>
+
+  <a routerLink="/auth/register" >You still don't have an account?</a>
+</form>

@@ -1,0 +1,6 @@
+<cc-chat-room-item
+  *ngFor="let room of rooms; trackBy: roomsTrackByFn"
+  [isSelected]="selectedRoom?.id === room.id"
+  [room]="room"
+  (click)="updateSelectedRoom(room)"
+></cc-chat-room-item>

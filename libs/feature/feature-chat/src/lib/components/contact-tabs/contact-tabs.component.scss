@@ -1,0 +1,39 @@
+@use 'libs/styles/src/lib/theme/colors';
+
+:host {
+  display: block;
+  width: 100%;
+
+  .tabs {
+    button {
+      width: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em 0;
+      cursor: pointer;
+      border: none;
+      color: colors.$white-color;
+      gap: 1em;
+      background: colors.$third500;
+
+      &.active {
+        color: colors.$main800;
+        background: colors.$white-color;
+      }
+    }
+  }
+}
+
+:host-context(.dark) {
+  .tabs {
+    button {
+      background: colors.$blockDark;
+
+      &.active {
+        color: colors.$main800;
+        background: colors.$translucent-block-dark;
+      }
+    }
+  }
+}
