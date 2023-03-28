@@ -14,6 +14,7 @@ import { ChatHistoryComponent } from './components/chat-history/chat-history.com
 import { ChatRoomListComponent } from './components/chat-rooms/chat-room-list/chat-room-list.component';
 import { ChatRoomItemComponent } from './components/chat-rooms/chat-room-item/chat-room-item.component';
 import { ContactTabsComponent } from './components/contact-tabs/contact-tabs.component';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { ContactTabsComponent } from './components/contact-tabs/contact-tabs.com
     MatIconModule,
     UiTextareaModule,
     UiButtonModule,
+    NgScrollbarModule,
   ],
   declarations: [
     ChatsComponent,

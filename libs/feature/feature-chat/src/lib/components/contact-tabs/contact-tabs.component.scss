@@ -1,8 +1,13 @@
 @use 'libs/styles/src/lib/theme/colors';
+@use 'libs/styles/src/lib/common/scrollbar';
 
 :host {
   display: block;
   width: 100%;
+
+  .scroll-wrapper {
+    max-height: calc(100vh - 160px);
+  }
 
   .tabs {
     button {

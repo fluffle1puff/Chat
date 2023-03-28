@@ -7,7 +7,7 @@ import { Room } from '@chat-client/models';
   styleUrls: ['./chat-room-list.component.scss'],
 })
 export class ChatRoomListComponent {
-  @Input() rooms!: Room[];
+  @Input() rooms?: Room[];
   @Input() selectedRoom?: Room;
 
   @Output() selectRoom = new EventEmitter<Room>();

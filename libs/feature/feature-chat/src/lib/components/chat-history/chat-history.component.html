@@ -1,26 +1,35 @@
-<div *ngIf="!!messages" class="history">
-  <div
-    class="message-wrapper"
-    *ngFor="let message of messages; let i = index; trackBy: messagesTrackByFn"
-    [class.current-user]="currentUser?.id === message.user.id"
-  >
-    <span
-      class="mesages-date"
-      *ngIf="showDateIfNotSameDay(message, messages[i - 1])"
+<ng-scrollbar
+  [autoHeightDisabled]="false"
+  class="green-scrollbar"
+  track="vertical"
+>
+  <div *ngIf="!!messages" class="history">
+    <div
+      class="message-wrapper"
+      *ngFor="let message of messages; let i = index; trackBy: messagesTrackByFn"
+      [class.current-user]="currentUser?.id === message.user.id"
     >
-      {{ message?.created_at | date : 'd MMMM' }}
-    </span>
-    <div class="message">
-      <div
-        class="user-name"
-        *ngIf="i === 0 || (i > 0 && (message.user.id !== messages[i - 1].user.id))"
+      <span
+        class="mesages-date"
+        *ngIf="showDateIfNotSameDay(message, messages[i - 1])"
       >
-        {{ message.user.username }}
-      </div>
-      <div class="text">
-        <span>{{ message.text }}</span>
-        <span class="time">{{ message.created_at | date : 'HH:mm' }}</span>
+        {{ message?.created_at | date : 'd MMMM' }}
+      </span>
+      <div class="message">
+        <div
+          class="user-name"
+          *ngIf="i === 0 || (i > 0 && (message.user.id !== messages[i - 1].user.id))"
+        >
+          {{ message.user.username }}
+        </div>
+        <div class="text">
+          <span>{{ message.text }}</span>
+          <span class="time">
+            {{ message.created_at | date : 'HH:mm' }}
+            <mat-icon>check</mat-icon>
+          </span>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ng-scrollbar>

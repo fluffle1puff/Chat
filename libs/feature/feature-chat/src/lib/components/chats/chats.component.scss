@@ -13,7 +13,7 @@
     border: 1px solid colors.$translucent-border-light;
     display: grid;
     grid-template-columns: 21.5em auto;
-    overflow: auto;
+    overflow: hidden;
   }
 
   .contacts {

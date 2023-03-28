@@ -27,6 +27,7 @@
     "date-fns": "^2.29.3",
     "lodash": "^4.17.21",
     "ng-keyboard-shortcuts": "^13.0.8",
+    "ngx-scrollbar": "^11.0.0",
     "ngx-socket-io": "^4.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

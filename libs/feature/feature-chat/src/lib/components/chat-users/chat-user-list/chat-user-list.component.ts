@@ -7,7 +7,7 @@ import { User } from '@chat-client/models';
   styleUrls: ['./chat-user-list.component.scss'],
 })
 export class ChatUserListComponent {
-  @Input() users!: User[];
+  @Input() users?: User[];
 
   @Output() selectUser = new EventEmitter<User>();
 

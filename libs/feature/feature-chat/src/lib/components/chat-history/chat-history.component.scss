@@ -1,5 +1,6 @@
 @use 'libs/styles/src/lib/theme/colors';
 @use 'libs/styles/src/lib/common/vars';
+@use 'libs/styles/src/lib/common/scrollbar';
 
 :host {
   display: block;
@@ -10,8 +11,9 @@
     width: 100%;
     grid-template-columns: 1fr;
     align-items: flex-end;
-    height: calc(100vh - 308px);
-    overflow-y: scroll;
+    max-height: calc(100vh - 285px);
+    height: calc(100vh - 285px);
+    padding-right: 15px;
 
     .message-wrapper {
       display: flex;
@@ -43,10 +45,18 @@
         }
 
         .time {
-          font-size: 0.64em;
-          opacity: 0.5;
+          font-size: 0.6em;
           line-height: 1em;
           padding-left: 1em;
+          position: relative;
+          top: 5px;
+          left: 4px;
+          display: flex;
+          gap: 5px;
+
+          mat-icon {
+            display: none;
+          }
         }
 
         .user-name {
@@ -69,10 +79,22 @@
             margin-left: 0px;
             margin-right: 0.7em;
           }
+
+          .time {
+            mat-icon {
+              display: block;
+              font-size: 1.5em;
+              height: 1em;
+              width: 1em;
+              position: relative;
+              top: -4px;
+            }
+          }
         }
       }
     }
   }
+
 }
 
 :host-context(.dark) {

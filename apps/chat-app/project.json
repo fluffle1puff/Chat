@@ -24,7 +24,7 @@
         "stylePreprocessorOptions": {
           "includePaths": ["./src/styles"]
         },
-        "allowedCommonJsDependencies": ["lodash"]
+        "allowedCommonJsDependencies": ["lodash", "bezier-easing"]
       },
       "configurations": {
         "production": {
