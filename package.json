@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx nx run chat-app:serve"
+    "start": "npx nx run chat-app:serve",
+    "build": "npx nx run chat-app:build",
+    "storybook": "npx nx run chat-app:storybook"
   },
   "private": true,
   "dependencies": {

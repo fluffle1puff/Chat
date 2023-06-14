@@ -18,7 +18,6 @@ import { clearState } from '@chat-client/util/util-meta-reducer';
 import { StateChatModule } from '@chat-client/state/state-chat';
 import { UtilTokenServiceModule } from '@chat-client/util/util-token-service';
 import { StateAuthModule } from '@chat-client/state/state-auth';
-import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [

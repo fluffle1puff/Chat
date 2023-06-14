@@ -23,7 +23,7 @@ export class ChatFacade {
     this.dispatch(ChatActions.LoadAllUsers());
   }
 
-  getCurrentUsers() {
+  getCurrentUser() {
     this.dispatch(ChatActions.GetCurrentUser());
   }
 

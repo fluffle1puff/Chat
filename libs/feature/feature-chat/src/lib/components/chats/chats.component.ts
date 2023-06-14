@@ -19,7 +19,7 @@ export class ChatsComponent {
 
   constructor(private chatFacade: ChatFacade) {
     this.chatFacade.loadAllUsers();
-    this.chatFacade.getCurrentUsers();
+    this.chatFacade.getCurrentUser();
     this.chatFacade.getUsersRooms();
     this.chatFacade.getMessages();
     this.chatFacade.getAddedMessage();
